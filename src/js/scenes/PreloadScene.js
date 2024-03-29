@@ -9,6 +9,7 @@ export default class PreloadScene extends Phaser.Scene {
     constructor() {
         super("Preload")
     }
+
     preload() {
         this.add.sprite(0, 0, "bg").setOrigin(0)
         this.loadingBar = new LoadingBar(this)
@@ -16,6 +17,7 @@ export default class PreloadScene extends Phaser.Scene {
         this.load.tilemapTiledJSON("tilemap", tilemapJson)
         this.load.atlas("objects", objectsPng, objectsJson)
     }
+
     create() {
         this.scene.start("Start")
     }
